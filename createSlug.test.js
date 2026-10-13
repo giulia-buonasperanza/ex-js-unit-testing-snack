@@ -14,4 +14,6 @@ const createSlug = require('./createSlug');
 
 test('createSlug aggiunge - agli spazi', () => {
     expect(createSlug('Hello World')).toBe('hello-world');
+    expect(() => createSlug('')).toThrow('Inserisci una stringa valida');
+    expect(() => createSlug(123)).toThrow('Inserisci una stringa valida');
 });
